@@ -1,0 +1,58 @@
+package hashSet;
+
+import java.util.Objects;
+
+public class Students {
+	
+	int sid;
+	String sname;
+	String city;
+	float percent;
+	
+	public Students() {
+		// TODO Auto-generated constructor stub
+	}
+	public Students(int sid, String sname, String city, float percent) {
+		
+		this.sid = sid;
+		this.sname = sname;
+		this.city = city;
+		this.percent = percent;
+	}
+	@Override
+	public String toString() {
+		return "Students [sid=" + sid + ", sname=" + sname + ", city=" + city + ", percent=" + percent + "]";
+	}
+	@Override
+	public int hashCode() {
+		//return Objects.hash(city, percent, sid, sname);
+		
+		int code = 0;
+		if(city.equals("pune")) {
+			code = 10;
+		}
+		else if(city.equals("mumbai")) {
+			code = 20;
+		}
+		else if(city.equals("nashik")) {
+			code = 40;
+		}
+		return code;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Students other = (Students) obj;
+		return Objects.equals(city, other.city) && Float.floatToIntBits(percent) == Float.floatToIntBits(other.percent)
+				&& sid == other.sid && Objects.equals(sname, other.sname);
+	}
+	
+	
+	
+
+}

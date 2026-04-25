@@ -1,0 +1,8 @@
+package utility;
+
+public interface Itraveller {
+	double TA = 0.039;
+	
+	double calculateTA();
+
+}

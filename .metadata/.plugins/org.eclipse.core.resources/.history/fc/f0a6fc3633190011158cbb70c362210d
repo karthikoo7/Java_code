@@ -1,0 +1,58 @@
+package demos;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Assignment4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Copy contents of the source file into the destination file. Accept name of source and destination from user
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		FileReader fr = null;
+		FileWriter fw = null;
+		
+		System.out.println("Enter Source File Name");
+		try {
+			String srcName = br.readLine();
+			fr = new FileReader("D:/myData"+"/"+srcName);
+			int i;
+			String str = "";
+			while((i = fr.read()) != -1) {
+				str += ((char) i);
+			}
+			fr.close();
+			
+			System.out.println("Enter Destination File Name");
+			String desName = br.readLine();
+			fw = new FileWriter("D:/myData"+"/"+desName);
+			
+			
+			fw.write(str);
+			System.out.println("Done");
+			
+	
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			
+			try {
+				fw.close();
+				br.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		
+	}
+
+}

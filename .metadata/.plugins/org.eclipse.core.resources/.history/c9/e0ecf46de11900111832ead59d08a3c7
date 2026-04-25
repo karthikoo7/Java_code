@@ -1,0 +1,22 @@
+package hashSet;
+
+public class Students {
+	
+	int sid;
+	String sname;
+	String city;
+	float percent;
+	public Students() {
+		// TODO Auto-generated constructor stub
+	}
+	public Students(int sid, String sname, String city, float percent) {
+		
+		this.sid = sid;
+		this.sname = sname;
+		this.city = city;
+		this.percent = percent;
+	}
+	
+	
+
+}

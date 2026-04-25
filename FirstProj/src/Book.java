@@ -1,0 +1,32 @@
+
+public class Book {
+	
+	private int bookId;
+	float bookPrice;
+	private String bookTitle;
+	static int count = 0;
+	
+	public Book() {
+		bookId = count;
+		bookTitle = "Adventures of Spiderman";
+		bookPrice = 200;
+		count++;
+	}
+	
+	public Book(String bookTitle) {
+		this.bookId = count;
+		this.bookTitle = bookTitle;
+		this.bookPrice = (float) (Math.random()*1000); //casting to float
+		count++;
+	}
+	
+	public void setPrice(float bookPrice) {
+		this.bookPrice = bookPrice;
+	}
+	
+	public void display() {
+		System.out.println("Book ID: " + bookId + " Book Title: " + bookTitle + " BookPrice: " + bookPrice);
+	}
+	
+
+}

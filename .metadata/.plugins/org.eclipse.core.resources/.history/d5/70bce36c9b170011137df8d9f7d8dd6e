@@ -1,0 +1,50 @@
+package staff;
+
+import utility.Itraveller;
+
+public class SalesManager extends Emp implements Itraveller{
+	
+	private double salesTarget;
+	private double perCommision;
+	private int daysTravelled;
+	
+	
+	public SalesManager() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public SalesManager(String name, int d, int m, int y, int empId, double salary, double salesTarget,
+			double perCommision, int daysTravelled) {
+		super(name, d, m, y, empId, salary);
+		this.salesTarget = salesTarget;
+		this.perCommision = perCommision;
+		this.daysTravelled = daysTravelled;
+	}
+	
+	public void display() {
+		super.display();
+		System.out.println("TARGET :  " + salesTarget + " Commision : " + perCommision);
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + "TARGET :  " + salesTarget + " Commision : " + perCommision;
+	}
+	
+	public double calSalary() {
+		// return super.calSalary() + (salesTarget * perCommision/100);  // salary - private
+		return salary + (salesTarget * perCommision/100); //salary - protected in the super class
+	}
+	
+	public double calIncentive() {
+		
+		return salesTarget * perCommision/100;
+	}
+	@Override
+	public double calculateTA() {
+		// TODO Auto-generated method stub
+		return this.daysTravelled * (salary * TA);
+	}
+	
+
+}

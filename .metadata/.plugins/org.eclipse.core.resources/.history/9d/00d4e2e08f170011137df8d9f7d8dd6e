@@ -1,0 +1,17 @@
+package shapes;
+
+public class Circle implements Drawable {
+
+	@Override
+	public void drawShape() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void calArea() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

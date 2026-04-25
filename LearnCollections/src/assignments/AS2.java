@@ -1,0 +1,80 @@
+package assignments;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+public class AS2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the size of array: ");
+		int sizeArr = sc.nextInt();
+		
+		List <String> arrL = new ArrayList<>();
+		
+		for(int i = 0; i< sizeArr;i++) {
+			arrL.add(sc.next());
+		}
+		
+		System.out.println(arrL);
+		
+		System.out.println();
+		
+		System.out.println(arrL.size());
+		
+		for(String s : arrL) {
+			System.out.println(arrL);
+		}
+		System.out.println("*************************************");
+		
+		Iterator <String> it = arrL.iterator();
+		
+		while(it.hasNext()) {
+		System.out.println(it.next());	    
+		}
+		
+
+		
+		ListIterator <String> ls = arrL.listIterator();
+		
+		while(ls.hasNext()) {
+			ls.next();
+		}
+		
+		
+		while(ls.hasPrevious()) {
+			System.out.println(ls.previous());
+			
+		}
+		System.out.println("*************************************");
+		Collections.sort(arrL);
+		System.out.println(arrL);
+		System.out.println("*************************************");
+		Collections.reverse(arrL);
+		System.out.println(arrL);
+		System.out.println("*************************************");
+		System.out.println("Enter your String : ");
+		String q = sc.next();
+		
+		if(arrL.contains(q)) {
+			for(int i = 0 ; i< arrL.size();i++) {
+				if(arrL.get(i).equals(q)) {
+					System.out.println("Value Found at index : " + i);
+				}
+			}
+		}
+		else {
+			System.out.println("NOT FOUND");
+		}
+		
+		System.out.println("*************************************");
+	}
+
+}

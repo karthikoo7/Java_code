@@ -1,0 +1,38 @@
+package demos;
+import java.io.*;
+
+public class Assignment3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = null;
+		FileWriter fw = null;
+		
+		
+		try {
+			
+		br = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("Enter File Name: " );
+		String filePath = br.readLine();
+		String fileName = br.readLine();
+		fw = new FileWriter("F:/" + filePath + "/" + fileName);
+		String str;
+		
+		while(!((str = br.readLine()).equals("quit"))) {
+			fw.write(str + "\n");
+			
+		}
+		
+		
+		
+		
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

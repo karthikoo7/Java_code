@@ -1,0 +1,47 @@
+package apps;
+
+import entities.Person;
+
+public class TryCatchDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		try {
+			int n1 = Integer.parseInt(args[0]);
+			int n2 = Integer.parseInt(args[1]);
+			
+			System.out.println("DIvision :" + n1/n2);
+			
+		}
+		/*
+		catch(NumberFormatException e) {
+			System.out.println("Enter numeric arguments");
+		}
+		catch(ArithmeticException e) {
+			System.out.println("Divide by 0 ?");
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("");
+		}*/
+		
+		catch(NumberFormatException | ArithmeticException | ArrayIndexOutOfBoundsException e) {
+			System.out.println("HAHAH");
+		}
+		catch(Exception e) {
+			//System.out.println(e.getMessage());
+			//System.out.println("SOME INPUTS ARE WRONG");
+			e.printStackTrace();
+		}
+		
+		Person p1 = new Person("karthik",22);
+		System.out.println(p1);
+		
+		System.out.println("hahahahahahahha ");
+	
+	
+	
+	}
+
+}

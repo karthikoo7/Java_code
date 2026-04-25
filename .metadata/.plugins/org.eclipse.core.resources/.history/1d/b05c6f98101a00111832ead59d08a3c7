@@ -1,0 +1,30 @@
+package hashSet;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SortUsingComparator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Set<String> set1 = new TreeSet<>();
+		
+		set1.add("if");
+		set1.add("implements");
+		set1.add("class");
+		set1.add("john");
+		set1.add("kabir");
+		set1.add("winning");
+		set1.add("dancer");
+		set1.add("master");
+		set1.add("wow");
+		
+		for(String s: set1) {
+			System.out.println(s);
+		}
+
+
+	}
+
+}

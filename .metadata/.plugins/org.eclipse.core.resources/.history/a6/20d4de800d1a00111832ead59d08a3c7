@@ -1,0 +1,92 @@
+package demos;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+import staff.*;
+import utility.Itraveller;
+
+public class EmpDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Emp [] emparr = new Emp[3];
+		
+		emparr[0] = new SalesManager("Don", 22 , 12, 1990, 2, 12000, 100005, 5.5, 25,"54654654" );
+		emparr[1] = new Programmer("Pathaan" , 12, 4,2004, 6, 5400, "Wrath Of God" , 8, 40, 10,"22132156" );
+		emparr[2] = new Admin("Radhe", 45, 5, 2009, 1342, 32115, 5450);
+		
+		/*
+		for(Emp e : emparr) {
+			System.out.println("***********************************");
+			e.display();
+		}**/
+		
+		for(Emp r : emparr) {
+			System.out.println("***********************************");
+			System.out.println(r);
+			System.out.println(r.calSalary());
+		}
+		
+		/*
+		System.out.println("***********************************");
+		
+		double sum = 0;
+		
+		for(Emp e : emparr) {
+			if(e instanceof SalesManager) {
+				sum += ((SalesManager)e).calIncentive();
+				System.out.println(e);
+			}
+			else if(e instanceof Programmer) {
+				sum += ((Programmer)e).calExtraCharges();
+				System.out.println(e);
+			}
+			else if(e instanceof Admin) {
+				sum += ((Admin)e).callAllowance();
+				System.out.println(e);
+			}
+		}
+		System.out.println("TOTAL EXTRA BONUS TO ALL EMPS : " + sum);
+
+		for(Emp e : emparr) {
+			if(e instanceof Itraveller) {
+				System.out.println("Salary: "+((Itraveller)e).calculateTA());
+			}
+			
+		}*/
+		
+		showDetails(emparr);
+		
+		System.out.println("***********************************************");
+		
+		Set<Emp> sett = new TreeSet<>();
+		
+		sett.add(new SalesManager("Don", 22 , 12, 1990, 2, 12000, 100005, 5.5, 25,"54654654"));
+		sett.add(new SalesManager("PAthaan", 21 , 42, 1994, 4, 12030, 10005, 5.25, 55,"5221231"));
+		sett.add(new SalesManager("David", 28 , 78, 1997, 6, 112, 100895, 5.7, 85,"59484654"));
+		
+		for(Emp s : sett) {
+			System.out.println(s);
+		}
+		
+		
+		System.out.println("***********************************************");
+		
+	}
+	
+	static void showDetails(Emp [] arr) {
+		for(Emp e : arr) {
+			if(e instanceof Itraveller) {
+				System.out.println(((Itraveller)e).getPassportDetails());
+				System.out.println(((Itraveller)e).getTravelHours());
+			}
+		}
+		
+		
+	}
+	
+	
+
+}

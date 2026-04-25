@@ -1,0 +1,41 @@
+package demos;
+import java.io.*;
+
+public class FileWriting {
+
+	public static void main(String[] args){
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = null;
+		FileWriter fw = null;
+		
+		try {
+		br = new BufferedReader(new InputStreamReader(System.in));
+		fw = new FileWriter("F:/mydata/mycontent.txt");
+		String i;
+		while(!((i = br.readLine()).equals("quit"))) {
+			fw.write(i + "\n");
+			System.out.println();
+			
+		}
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+			
+		}
+		finally {
+			try {
+				br.close();
+				fw.close();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

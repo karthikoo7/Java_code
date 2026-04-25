@@ -1,0 +1,76 @@
+package demos;
+
+import staff.*;
+import utility.Itraveller;
+
+public class EmpDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Emp [] emparr = new Emp[3];
+		
+		emparr[0] = new SalesManager("Don", 22 , 12, 1990, 2, 12000, 100005, 5.5, 25 );
+		emparr[1] = new Programmer("Pathaan" , 12, 4,2004, 6, 54000, "Wrath Of God" , 850, 45, 10 );
+		emparr[2] = new Admin("Radhe", 45, 5, 2009, 1342, 32115, 5450);
+		
+		/*
+		for(Emp e : emparr) {
+			System.out.println("***********************************");
+			e.display();
+		}
+		
+		for(Emp r : emparr) {
+			System.out.println("***********************************");
+			System.out.println(r);
+			System.out.println(r.calSalary());
+		}
+		*/
+		/*
+		System.out.println("***********************************");
+		
+		double sum = 0;
+		
+		for(Emp e : emparr) {
+			if(e instanceof SalesManager) {
+				sum += ((SalesManager)e).calIncentive();
+				System.out.println(e);
+			}
+			else if(e instanceof Programmer) {
+				sum += ((Programmer)e).calExtraCharges();
+				System.out.println(e);
+			}
+			else if(e instanceof Admin) {
+				sum += ((Admin)e).callAllowance();
+				System.out.println(e);
+			}
+		}
+		System.out.println("TOTAL EXTRA BONUS TO ALL EMPS : " + sum);
+*/
+		for(Emp e : emparr) {
+			if(e instanceof Itraveller) {
+				System.out.println(((SalesManager)e).calculateTA());
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+
+}

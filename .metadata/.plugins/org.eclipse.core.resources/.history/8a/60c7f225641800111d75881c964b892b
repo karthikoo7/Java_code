@@ -1,0 +1,9 @@
+package apps;
+
+public class InvalidNameException extends Exception {
+	
+	String msg;
+	
+	public CustomException
+
+}

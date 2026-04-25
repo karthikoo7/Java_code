@@ -1,0 +1,25 @@
+package demos;
+import java.io.*;
+
+public class FileWriting {
+
+	public static void main(String[] args){
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = null;
+		FileWriter fw = null;
+		
+		try {
+		br = new BufferedReader(new InputStreamReader(System.in));
+		fw = new FileWriter("F:/mydata/mycontent.txt");
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch(IOException e) {
+			
+		}
+		
+	}
+
+}

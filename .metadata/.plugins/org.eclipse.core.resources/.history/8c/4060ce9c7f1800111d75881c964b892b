@@ -1,0 +1,15 @@
+package apps;
+
+import myExceptions.InvalidCountryException;
+
+public class UserRegistration {
+	
+	static String userName;
+	static String userCountry;
+	
+
+	
+	
+	}
+	
+

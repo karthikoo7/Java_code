@@ -1,0 +1,48 @@
+package demos;
+import java.io.*;
+
+public class Assignment {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = null;
+		
+		try {
+			br = new BufferedReader(new InputStreamReader(System.in));
+			String str;
+			System.out.println("Enter a Number:  OR quit to quit");
+			
+			while(!(str = br.readLine()).equals("quit")) {
+				try {
+					int num = Integer.parseInt(str);
+					
+					String factors = "";
+					
+					for(int i = 1; i<=num;i++) {
+						if(num % i == 0) {	
+							factors += i + ",";
+						}
+					}
+					System.out.println(factors);
+				}		catch(NumberFormatException e) {
+					//throw new Exception("Not a Number");
+					System.out.println("Not a number");
+				}
+			}
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+
+		finally {
+			try {
+				br.close();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

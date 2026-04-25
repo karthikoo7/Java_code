@@ -1,0 +1,19 @@
+package demos;
+import java.io.*;
+
+public class Assignment6 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter File NAme : ");
+		String str = br.readLine();
+		BufferedReader br1 = new BufferedReader(new FileReader("F:/myData/" + str));
+		
+		
+		
+
+	}
+
+}

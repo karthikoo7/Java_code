@@ -1,0 +1,67 @@
+package staff;
+
+import utility.Itraveller;
+
+public class SalesManager extends Emp implements Itraveller,Comparable <SalesManager>{
+	
+	private double salesTarget;
+	private double perCommision;
+	private int daysTravelled;
+	protected String passNum;
+	
+	
+	public SalesManager() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public SalesManager(String name, int d, int m, int y, int empId, double salary, double salesTarget,
+			double perCommision, int daysTravelled, String passNum) {
+		super(name, d, m, y, empId, salary);
+		this.salesTarget = salesTarget;
+		this.perCommision = perCommision;
+		this.daysTravelled = daysTravelled;
+		this.passNum = passNum;
+	}
+	
+	public void display() {
+		super.display();
+		System.out.println("TARGET :  " + salesTarget + " Commision : " + perCommision);
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + "TARGET :  " + salesTarget + " Commision : " + perCommision;
+	}
+	
+	public double calSalary() {
+		// return super.calSalary() + (salesTarget * perCommision/100);  // salary - private
+		return salary + calIncentive() + calculateTA(); //salary - protected in the super class
+	}
+	
+	public double calIncentive() {
+		
+		return salesTarget * perCommision/100;
+	}
+	@Override
+	public double calculateTA() {
+		// TODO Auto-generated method stub
+		return this.daysTravelled * (salary * TA);
+	}
+	@Override
+	public String getPassportDetails() {
+		// TODO Auto-generated method stub
+		return "NAME : " + getName() +"PASS NUM : " + this.passNum;
+	}
+	@Override
+	public int getTravelHours() {
+		// TODO Auto-generated method stub
+		return daysTravelled * 24;
+	}
+	@Override
+	public int compareTo(SalesManager o) {
+		// TODO Auto-generated method stub
+		return (int) (calSalary() - o.salary);
+	}
+	
+
+}

@@ -1,0 +1,52 @@
+package staff;
+
+import utility.Date;
+import utility.Person;
+
+public abstract class Emp extends Person {
+	
+	private int empId;
+	protected double salary;
+
+	public Emp() {
+		super();
+		// TODO Auto-generated constructor stub
+		this.empId = 0;
+		this.salary = 100.1;
+	}
+
+	public Emp(String name, int d, int m, int y,int empId, double salary) {
+		super(name, d, m, y);
+		// TODO Auto-generated constructor stub
+		this.empId = empId;
+		this.salary = salary;
+	}
+
+	public Emp(String name, Date bdate , int empId, double salary) {
+		super(name, bdate);
+		// TODO Auto-generated constructor stub
+		this.empId = empId;
+		this.salary = salary;
+	}
+	
+	public void display() {
+		super.display(); //calling display() in superclass person
+		System.out.println("EMP ID : " + this.empId);
+		System.out.println("SALARY : " + this.salary);
+	}
+	
+	public String toString() {
+		return super.toString() + " EmpId : " + this.empId + " Salary : " + this.salary;
+	}
+	
+	
+	//functions as a getter method here
+	public abstract double calSalary();
+
+	public String getPassportDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

@@ -1,0 +1,23 @@
+package assignments;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AS7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "cocacola";
+		
+		Map<Integer,Character> mp = new HashMap<>();
+		
+		for(int i = 0; i<str.length();i++) {
+			mp.getOrDefault(i, str.charAt(i));
+		}
+		
+		
+
+	}
+
+}

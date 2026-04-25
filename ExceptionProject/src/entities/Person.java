@@ -1,0 +1,34 @@
+package entities;
+
+import apps.InvalidNameException;
+
+public class Person{
+	String name;
+	int age;
+	
+	public Person(String name, int age) throws InvalidNameException {
+		boolean flag = false;
+		//logic
+		if(name.charAt(0) > 60 && name.charAt(0) < 90 ) {
+			for(int i = 1; i< name.length(); i++) {
+				if(name.charAt(i)>96 && name.charAt(i) < 114) {
+					flag = true;
+				}
+			}
+		}
+		//exception handling
+		if(flag) {
+			this.name = name;
+		}
+		else {
+			throw new InvalidNameException();
+		}
+		this.age = age;
+		
+	}
+	
+	public String toString() {
+		return this.name +"\n"+ this.age;
+	}
+
+}

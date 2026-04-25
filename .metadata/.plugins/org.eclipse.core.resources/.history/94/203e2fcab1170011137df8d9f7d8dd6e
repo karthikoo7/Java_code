@@ -1,0 +1,33 @@
+package operations;
+
+public class MyNumber implements AdvIntOperations {
+
+	@Override
+	public boolean isOdd(int n) {
+		// TODO Auto-generated method stub
+		if(n % 2 == 0) {
+			return true;
+		}
+		
+		return false;
+	}
+
+	@Override
+	public boolean isEven(int n) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isPrime(int n) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean calFactorial(int n) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

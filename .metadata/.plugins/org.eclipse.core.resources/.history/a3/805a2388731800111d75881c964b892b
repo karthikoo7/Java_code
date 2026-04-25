@@ -1,0 +1,9 @@
+package apps;
+
+public class PasswordTooLongException extends Exception {
+	
+	String msg;
+	
+	public Pass
+
+}

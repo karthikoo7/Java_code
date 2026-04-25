@@ -1,0 +1,30 @@
+package demos;
+import java.io.*;
+
+public class BufferedWriting {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		/*
+		BufferedWriter bw = new BufferedWriter(new FileWriter("F:/myData/buffer.txt"));
+		
+		bw.write("This is a buffer");
+		bw.newLine();
+		bw.write("Im a hero");
+		bw.newLine();
+		
+		bw.flush();
+		*/
+		
+		BufferedReader br = new BufferedReader(new FileReader("F:/myData/buffer.txt"));
+		String str;
+		int lineno = -1;
+		while((str = br.readLine()) != null) {
+			System.out.println((++lineno)+" "+br.readLine());
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,38 @@
+package apps;
+
+import myExceptions.InvalidColorException;
+
+public class Color {
+	
+	private int r,g,b;
+
+	public Color() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Color(int r, int g, int b) throws InvalidColorException {
+		if(r >=0 && r <= 255) {
+		this.r = r;
+		}
+		else {
+			throw new InvalidColorException();
+		}
+		if(g >=0 && g <= 255) {
+		this.g = g;
+		}
+		else {
+			throw new InvalidColorException();
+		}
+		
+		if(b >=0 && b <= 255) {
+		this.b = b;
+		}
+		else {
+			throw new InvalidColorException();
+		}
+	}
+	
+	
+	
+
+}

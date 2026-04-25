@@ -1,0 +1,31 @@
+package demos;
+
+import staff.Admin;
+import staff.Emp;
+import staff.Programmer;
+import staff.SalesManager;
+import java.io.*;
+
+
+public class SerializationDemo {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		// TODO Auto-generated method stub
+		
+		Emp[] arr = new Emp[3];
+		
+		    arr[0] = new SalesManager("Don", 22 , 12, 1990, 2, 12000, 100005, 5.5, 25,"54654654" );
+			arr[1] = new Programmer("Pathaan" , 12, 4,2004, 6, 5400, "Wrath Of God" , 8, 40, 10,"22132156" );
+			arr[2] = new Admin("Radhe", 45, 5, 2009, 1342, 32115, 5450);
+			
+			
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("F:/myData/empsData"));
+			
+			for(Emp e : arr) {
+				oos.writeObject(e);
+			}
+			
+			oos.close();
+	}
+
+}

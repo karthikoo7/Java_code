@@ -1,0 +1,33 @@
+package assignments;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class AS6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map<Integer,String> mp = new HashMap<>();
+		
+		mp.put(4, "Rehman");
+		mp.put(6, "Kabir");
+		mp.put(7, "Don");
+		mp.put(1, "Karthik");
+		mp.put(2, "Dhurandhar");
+		mp.put(3, "Dancing Man");
+		
+		
+		System.out.println(mp);
+		
+		System.out.println("*************************************");
+		
+		for(Entry<Integer, String> m : mp.entrySet()) {
+			System.out.println(m);
+			
+		}
+
+	}
+
+}

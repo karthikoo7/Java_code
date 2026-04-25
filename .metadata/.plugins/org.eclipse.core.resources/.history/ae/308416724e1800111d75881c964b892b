@@ -1,0 +1,26 @@
+package apps;
+
+public class TryCatchDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		try {
+			int n1 = Integer.parseInt(args[0]);
+			int n2 = Integer.parseInt(args[1]);
+			
+			System.out.println("DIvision :" + n1/n2);
+			
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println("SOME INPUTS ARE WRONG");
+			e.printStackTrace();
+		}
+	
+	
+	
+	}
+
+}

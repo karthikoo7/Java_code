@@ -1,0 +1,41 @@
+package apps;
+
+import java.util.*;
+import java.util.Scanner;
+
+public class ArrayAccess {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.print("Enter SIZE OF ARRAY : ");
+		int size = sc.nextInt();
+		
+		int [] arr = new int[size];
+		
+		for(int i = 0;i<size;i++) {
+			System.out.print("Enter for Index : " + i + " = ");
+			arr[i] = sc.nextInt();
+			System.out.println();
+		}
+		
+		System.out.print("Enter Index to Access:  ");
+		int index = sc.nextInt();
+		
+		try {
+			System.out.println("Valuse at Index : " + index + " is : " + arr[index]);
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Array Index out of bounds. The Size of Arr :" + size);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		//System.out.println(Arrays.toString(arr));
+	}
+
+}

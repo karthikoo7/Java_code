@@ -1,0 +1,21 @@
+
+public class Main2 {
+	
+	
+	public static void main(String [] args) {
+	Book b1 = new Book();
+	b1.display();
+	
+	Book b2 = new Book("Study of Vednata");
+	b2.display();
+	b2.setPrice(500);
+	b2.display();
+	
+	Book b3 = new Book("The Dancing Monkey");
+	b3.display();
+	
+	
+	
+	}
+
+}

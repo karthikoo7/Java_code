@@ -1,0 +1,26 @@
+package apps;
+
+import java.util.Scanner;
+
+public class ArrayAccess {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("Enter SIZE OF ARRAY : ");
+		int size = sc.nextInt();
+		
+		int [] arr = new int[size];
+		
+		for(int i = 0;i<size;i++) {
+			System.out.println("Enter for Index : " + i);
+			arr[i] = sc.nextInt();
+		}
+		
+		System.out.println(arr);
+	}
+
+}

@@ -1,0 +1,5 @@
+package myExceptions;
+
+public class InvalidCountryException extends Exception {
+
+}

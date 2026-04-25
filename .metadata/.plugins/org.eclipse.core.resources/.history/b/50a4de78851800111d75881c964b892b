@@ -1,0 +1,13 @@
+package apps;
+
+public class ColorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Color c1 = new Color();
+		System.out.println(c1);
+
+	}
+
+}

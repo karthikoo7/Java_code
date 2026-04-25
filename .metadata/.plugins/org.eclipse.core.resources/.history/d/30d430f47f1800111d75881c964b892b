@@ -1,0 +1,25 @@
+package apps;
+
+import myExceptions.InvalidCountryException;
+
+public class TestUser {
+
+	public static void main(String[] args) throws InvalidCountryException { 
+		// TODO Auto-generated method stub
+		
+		
+		registerUser("Karthik", "Germany");
+		
+
+	}
+	public static void registerUser(String userName, String userCountry) throws InvalidCountryException {
+		if(userCountry.equals("India")) {
+			System.out.println("User Registration DOne Successfully ");
+		}
+	
+		else {
+			throw new InvalidCountryException();
+		}
+	} 
+
+}

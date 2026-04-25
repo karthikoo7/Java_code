@@ -1,0 +1,23 @@
+package apps;
+
+import myExceptions.InvalidCountryException;
+
+public class UserRegistration {
+	
+	static String userName;
+	static String userCountry;
+	
+
+	
+	public static void registerUser(String userName, String userCountry) throws InvalidCountryException {
+		if(userCountry.equals("India")) {
+			System.out.println("User Registration DOne Successfully ");
+		}
+	
+		else {
+			throw new InvalidCountryException();
+		}
+	} 
+	}
+	
+

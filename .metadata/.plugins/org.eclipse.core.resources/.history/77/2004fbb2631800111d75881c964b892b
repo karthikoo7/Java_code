@@ -1,0 +1,9 @@
+package apps;
+
+public class CustomException extends Exception {
+	
+	String msg;
+	
+	public CustomException
+
+}

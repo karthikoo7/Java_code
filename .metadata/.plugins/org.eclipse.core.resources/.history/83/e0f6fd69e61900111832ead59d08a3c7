@@ -1,0 +1,28 @@
+package hashSet;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Hashing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Set <Students> sts = new HashSet<>();
+		
+		sts.add(new Students(43,"Karthik","Mumbai",4.0f));
+		sts.add(new Students(3,"Krthik","Pune",8.0f));
+		sts.add(new Students(4,"Kartik","Nashik",32.0f));
+		sts.add(new Students(23,"Kathike","Pune",23.0f));
+		sts.add(new Students(33,"Karthk","Mumbai",78.0f));
+		sts.add(new Students(53,"Karik","Nashik",56.0f));
+		sts.add(new Students(63,"Karthik","Pune",12.0f));
+		sts.add(new Students(93,"Kik","Pune",88.0f));
+		sts.add(new Students(13,"Kaik","Mumbai",54.0f));
+		
+		for(Students s: sts) {
+		System.out.println(s);
+		}
+	}
+
+}

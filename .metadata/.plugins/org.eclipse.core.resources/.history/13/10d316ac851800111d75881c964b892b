@@ -1,0 +1,19 @@
+package myExceptions;
+
+
+public class InvalidColorException extends Exception {
+	
+	String msg;
+	
+	public InvalidColorException() {
+		this.msg = "GALAR COLOR DALA";
+	}
+	
+	public String toString() {
+		return msg;
+	}
+	
+	public String getMessage() {
+		return msg;
+	}
+}

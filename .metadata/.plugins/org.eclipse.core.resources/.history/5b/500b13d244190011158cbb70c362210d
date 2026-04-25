@@ -1,0 +1,51 @@
+package demos;
+import java.io.*;
+
+public class Assignment6 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter File Name : ");
+		String str = br.readLine();
+		BufferedWriter bw = new BufferedWriter(new FileWriter("F:/myData/" + str));
+		
+		bw.write("sjagjkadsbgjnasdg");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasdgsgjnadsjangjasdg");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasdgsdkjndskjangjndsgjkdsbgkjbsdkgb");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasdgsdjgsdkjgkjadsg");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasddskfbkdsababgkfbdsgsdbgdsgkg");
+		bw.newLine();
+		
+		bw.close();
+		
+		BufferedReader br1 = new BufferedReader(new FileReader("F:/myData/" + str));
+		int lineNo = 1;
+		String str2;
+		int count = 0;
+		int save = 0;
+		
+		while((str2 = br1.readLine()) != null) {
+			System.out.println((lineNo++)+" " + str2 );
+			if(count<str2.length()) {
+				count = str2.length();
+				save = lineNo - 1;
+			}
+		}
+		System.out.println("****************************************************");
+		System.out.println("HighestCount Line:  "+ count + " Line number " + save);
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,58 @@
+package demos;
+import java.io.*;
+
+public class Assignment6 {
+	//Display line no with maximum no of characters within a file, accept file name from user
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter File Name : ");
+		String str = br.readLine();
+		BufferedWriter bw = new BufferedWriter(new FileWriter("F:/myData/" + str));
+		
+		bw.write("sjagjkadsbgjnasdg");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasdgsgjnadsjangjasdg");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasdgsdkjndskjangjndsgjkdsbgkjbsdkgb");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasdgsdjgsdkjgkjajdsnfkjnsdjkfnsjdknnfsdjnfdksjnfdsg");
+		bw.newLine();
+		bw.write("sjagjkadsbgjnasddskfbkdsababgkfbdsgsdbgdsgkg");
+		bw.newLine();
+		
+		bw.close();
+		
+		BufferedReader br1 = new BufferedReader(new FileReader("F:/myData/" + str));
+		int lineNo = 1;
+		String str2;
+		int count = 0;
+		int maxLine = 0;
+		String line = "";
+		
+		while((str2 = br1.readLine()) != null) {
+			System.out.println((lineNo++)+" " + str2 );
+			if(count<str2.length()) {
+				count = str2.length();
+				maxLine = lineNo - 1;
+				line = str2;
+			}
+			
+		}
+		System.out.println(line);
+		
+		//System.out.println("****************************************************");
+		//System.out.println("HighestCount Line:  "+ count + " Line number " + maxLine);
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

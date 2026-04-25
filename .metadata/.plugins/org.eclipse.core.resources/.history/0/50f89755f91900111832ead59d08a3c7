@@ -1,0 +1,69 @@
+package hashSet;
+
+import java.util.Objects;
+
+public class Students implements Comparable {
+	
+	int sid;
+	String sname;
+	String city;
+	float percent;
+	
+	public Students() {
+		// TODO Auto-generated constructor stub
+	}
+	public Students(int sid, String sname, String city, float percent) {
+		
+		this.sid = sid;
+		this.sname = sname;
+		this.city = city;
+		this.percent = percent;
+	}
+	
+	public String toString() {
+		return "Students [sid=" + sid + ", sname=" + sname + ", city=" + city + ", percent=" + percent + "]";
+	}
+	
+	//uses the overidden hashcode logicwritten below instead of the built in
+	@Override
+	public int hashCode() { //for grouping i.e bucket criteria
+		//return Objects.hash(city, percent, sid, sname);
+		
+		int code = 0;
+		if(city.equalsIgnoreCase("pune")) {
+			code = 10;
+		}
+		else if(city.equalsIgnoreCase("mumbai")) {
+			code = 20;
+		}
+		else if(city.equalsIgnoreCase("nashik")) {
+			code = 40;
+		}
+		return code;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean flag = false;
+		
+		if(obj instanceof Students) {
+			Students s = (Students)obj;
+			if(this.sid == s.sid && this.sname.equals(s.sname) && this.city.equals(s.city) && this.percent == s.percent) {
+				flag = true;
+			}
+		}
+		
+	
+	
+		return flag;
+	}
+	
+	public int compareTo(Students o) {
+		// TODO Auto-generated method stub
+		return this.sid - o.sid;
+	}
+	
+	
+
+
+}
